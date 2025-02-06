@@ -1,0 +1,284 @@
+{
+  "Title": "Political Compass Quiz",
+  "Questions": [
+    {
+      "QuestionText": "Lo Stato dovrebbe fornire sanità gratuita per tutti?",
+      "Answers": [
+        {
+          "AnswerText": "Molto d'accordo",
+          "AnswerValue": 2,
+          "AnswerSign": -1
+        },
+        {
+          "AnswerText": "D'accordo",
+          "AnswerValue": 1,
+          "AnswerSign": -1
+        },
+        {
+          "AnswerText": "Neutrale",
+          "AnswerValue": 0,
+          "AnswerSign": 0
+        },
+        {
+          "AnswerText": "In disaccordo",
+          "AnswerValue": -1,
+          "AnswerSign": 1
+        },
+        {
+          "AnswerText": "Molto in disaccordo",
+          "AnswerValue": -2,
+          "AnswerSign": 1
+        }
+      ],
+      "QuestionType": "E"
+    },
+    {
+      "QuestionText": "I governi dovrebbero tassare di più i ricchi per ridurre le disuguaglianze?",
+      "Answers": [
+        {
+          "AnswerText": "Molto d'accordo",
+          "AnswerValue": 2,
+          "AnswerSign": -1
+        },
+        {
+          "AnswerText": "D'accordo",
+          "AnswerValue": 1,
+          "AnswerSign": -1
+        },
+        {
+          "AnswerText": "Neutrale",
+          "AnswerValue": 0,
+          "AnswerSign": 0
+        },
+        {
+          "AnswerText": "In disaccordo",
+          "AnswerValue": -1,
+          "AnswerSign": 1
+        },
+        {
+          "AnswerText": "Molto in disaccordo",
+          "AnswerValue": -2,
+          "AnswerSign": 1
+        }
+      ],
+      "QuestionType": "E"
+    },
+    {
+      "QuestionText": "I matrimoni tra persone dello stesso sesso dovrebbero essere legali?",
+      "Answers": [
+        {
+          "AnswerText": "Molto d'accordo",
+          "AnswerValue": 2,
+          "AnswerSign": -1
+        },
+        {
+          "AnswerText": "D'accordo",
+          "AnswerValue": 1,
+          "AnswerSign": -1
+        },
+        {
+          "AnswerText": "Neutrale",
+          "AnswerValue": 0,
+          "AnswerSign": 0
+        },
+        {
+          "AnswerText": "In disaccordo",
+          "AnswerValue": -1,
+          "AnswerSign": 1
+        },
+        {
+          "AnswerText": "Molto in disaccordo",
+          "AnswerValue": -2,
+          "AnswerSign": 1
+        }
+      ],
+      "QuestionType": "L"
+    },
+    {
+      "QuestionText": "Dovremmo ridurre la dipendenza dai combustibili fossili anche se ciò danneggia l'economia?",
+      "Answers": [
+        {
+          "AnswerText": "Molto d'accordo",
+          "AnswerValue": 2,
+          "AnswerSign": -1
+        },
+        {
+          "AnswerText": "D'accordo",
+          "AnswerValue": 1,
+          "AnswerSign": -1
+        },
+        {
+          "AnswerText": "Neutrale",
+          "AnswerValue": 0,
+          "AnswerSign": 0
+        },
+        {
+          "AnswerText": "In disaccordo",
+          "AnswerValue": -1,
+          "AnswerSign": 1
+        },
+        {
+          "AnswerText": "Molto in disaccordo",
+          "AnswerValue": -2,
+          "AnswerSign": 1
+        }
+      ],
+      "QuestionType": "Z"
+    },
+    {
+      "QuestionText": "Gheddafi è stato il miglior governatore possibile della Libia",
+      "Answers": [
+        {
+          "AnswerText": "Molto d'accordo'",
+          "AnswerValue": 2,
+          "AnswerSign": 1
+        },
+        {
+          "AnswerText": "D'accordo'",
+          "AnswerValue": 1,
+          "AnswerSign": 1
+        },
+        {
+          "AnswerText": "Non so",
+          "AnswerValue": 0,
+          "AnswerSign": 1
+        },
+        {
+          "AnswerText": "Disaccordo",
+          "AnswerValue": -1,
+          "AnswerSign": 1
+        },
+        {
+          "AnswerText": "Forte disaccordo",
+          "AnswerValue": -2,
+          "AnswerSign": 1
+        }
+      ],
+      "QuestionType": "L"
+    },
+    {
+      "QuestionText": "La responsabilità delle scelte in maniera economica dovrebbe ricadere su organimenti internazionali come il fondo monetario intenazionale, non sugli organi politici nazionali",
+      "Answers": [
+        {
+          "AnswerText": "Molto d'accordo",
+          "AnswerValue": 2,
+          "AnswerSign": 1
+        },
+        {
+          "AnswerText": "D'accordo",
+          "AnswerValue": 1,
+          "AnswerSign": 1
+        },
+        {
+          "AnswerText": "Non so",
+          "AnswerValue": 0,
+          "AnswerSign": 1
+        },
+        {
+          "AnswerText": "Disaccordo",
+          "AnswerValue": -1,
+          "AnswerSign": 1
+        },
+        {
+          "AnswerText": "Forte disaccordo",
+          "AnswerValue": -2,
+          "AnswerSign": 1
+        }
+      ],
+      "QuestionType": "E"
+    },
+    {
+      "QuestionText": "La moda è un settore strategico della società",
+      "Answers": [
+        {
+          "AnswerText": "Molto d'accordo",
+          "AnswerValue": 2,
+          "AnswerSign": -1
+        },
+        {
+          "AnswerText": "D'accordo",
+          "AnswerValue": 1,
+          "AnswerSign": -1
+        },
+        {
+          "AnswerText": "Non so",
+          "AnswerValue": 0,
+          "AnswerSign": -1
+        },
+        {
+          "AnswerText": "Disaccordo",
+          "AnswerValue": -1,
+          "AnswerSign": -1
+        },
+        {
+          "AnswerText": "Forte disaccordo",
+          "AnswerValue": -2,
+          "AnswerSign": -1
+        }
+      ],
+      "QuestionType": "L"
+    },
+    {
+      "QuestionText": "Il femminismo nel XXI secolo non ha più motivo di esistere in quanto tale",
+      "Answers": [
+        {
+          "AnswerText": "Molto d'accordo",
+          "AnswerValue": 2,
+          "AnswerSign": 1
+        },
+        {
+          "AnswerText": "D'accordo",
+          "AnswerValue": 1,
+          "AnswerSign": 1
+        },
+        {
+          "AnswerText": "Non so",
+          "AnswerValue": -0,
+          "AnswerSign": 1
+        },
+        {
+          "AnswerText": "Disaccordo",
+          "AnswerValue": -1,
+          "AnswerSign": 1
+        },
+        {
+          "AnswerText": "Forte disaccordo",
+          "AnswerValue": -2,
+          "AnswerSign": 1
+        }
+      ],
+      "QuestionType": "L"
+    },
+    {
+      "QuestionText": "J.K. Rowling è una vergogna per tutte le donne per via delle sue affermazioni transfobiche",
+      "Answers": [
+        {
+          "AnswerText": "Molto d'accordo",
+          "AnswerValue": 2,
+          "AnswerSign": -1
+        },
+        {
+          "AnswerText": "D'accordo",
+          "AnswerValue": 1,
+          "AnswerSign": -1
+        },
+        {
+          "AnswerText": "Non so",
+          "AnswerValue": 0,
+          "AnswerSign": -1
+        },
+        {
+          "AnswerText": "Disaccordo",
+          "AnswerValue": -1,
+          "AnswerSign": -1
+        },
+        {
+          "AnswerText": "Forte disaccordo",
+          "AnswerValue": -2,
+          "AnswerSign": -1
+        }
+      ],
+      "QuestionType": "L"
+    }
+  ]
+}
