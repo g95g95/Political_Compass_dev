@@ -26,7 +26,7 @@ export default function Test() {
             .then((res) => res.json())
             .then((data) => {
                 setQuestions(data.Questions);
-                setResponses(new Array(data.Questions.length).fill({ x: 0, y: 0, z: 0 }));
+                setResponses(Array(data.Questions.length).fill({ x: 0, y: 0, z: 0 }));
             });
     }, []);
 
@@ -36,31 +36,26 @@ export default function Test() {
         }
     }, [currentQuestion, questions.length]);
 
+    useEffect(() => {
+        if (currentQuestion >= questions.length) {
+            const timer = setTimeout(() => navigateToResults(false), 1000);
+            return () => clearTimeout(timer);
+        }
+    }, [currentQuestion, questions.length]);
+
     const handleAnswer = (answer: Answer) => {
         setResponses((prevResponses) => {
             const updatedResponses = [...prevResponses];
-            const questionType = questions[currentQuestion].QuestionType;
+            const questionType = questions[currentQuestion]?.QuestionType;
 
-            switch (questionType) {
-                case "L":
-                    updatedResponses[currentQuestion] = {
-                        ...updatedResponses[currentQuestion],
-                        y: answer.AnswerValue * answer.AnswerSign
-                    };
-                    break;
-                case "E":
-                    updatedResponses[currentQuestion] = {
-                        ...updatedResponses[currentQuestion],
-                        x: answer.AnswerValue * answer.AnswerSign
-                    };
-                    break;
-                case "Z":
-                    updatedResponses[currentQuestion] = {
-                        ...updatedResponses[currentQuestion],
-                        z: answer.AnswerValue * answer.AnswerSign
-                    };
-                    break;
+            if (questionType) {
+                updatedResponses[currentQuestion] = {
+                    ...updatedResponses[currentQuestion],
+                    [questionType === "L" ? "y" : questionType === "E" ? "x" : "z"]:
+                        answer.AnswerValue * answer.AnswerSign
+                };
             }
+
             return updatedResponses;
         });
 
@@ -68,11 +63,23 @@ export default function Test() {
     };
 
     const navigateToResults = (fromMidTest: boolean) => {
-        const totalX = responses.reduce((acc, r) => acc + r.x, 0);
-        const totalY = responses.reduce((acc, r) => acc + r.y, 0);
-        const totalZ = responses.reduce((acc, r) => acc + r.z, 0);
+        // Sommiamo i valori X, Y e Z
+        const totalX = responses.map(r => r.x || 0).reduce((acc, x) => acc + x, 0);
+        const totalY = responses.map(r => r.y || 0).reduce((acc, y) => acc + y, 0);
+        const totalZ = responses.map(r => r.z || 0).reduce((acc, z) => acc + z, 0);
 
-        router.push(`/result?x=${totalX}&y=${totalY}&z=${totalZ}&fromMidTest=${fromMidTest}`);
+        // Contiamo quante domande appartengono a ogni asse
+        const totalQuestionsX = questions.filter(q => q.QuestionType === "E").length || 1;
+        const totalQuestionsY = questions.filter(q => q.QuestionType === "L").length || 1;
+        const totalQuestionsZ = questions.filter(q => q.QuestionType === "Z").length || 1;
+
+        // Normalizziamo ogni valore in base al numero di domande di quel tipo
+        const normX = totalX / totalQuestionsX;
+        const normY = totalY / totalQuestionsY;
+        const normZ = totalZ / totalQuestionsZ;
+
+        // Reindirizza ai risultati con i valori normalizzati
+        router.push(`/result?x=${normX}&y=${normY}&z=${normZ}&fromMidTest=${fromMidTest}`);
     };
 
     if (questions.length === 0) return <p style={{ textAlign: "center", fontSize: "18px" }}>Caricamento...</p>;
